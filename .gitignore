@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+
+# VS Code
+.vscode/
+
+# Dataset
+chest_xray/
+
+# Trained models
+saved_model_v3/
+*.keras
+*.h5
+
+# OS files
+.DS_Store
+Thumbs.db

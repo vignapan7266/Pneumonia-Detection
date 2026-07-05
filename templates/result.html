@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pneumonia Detection Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Prediction Result</h1>
+
+        <div class="result-section">
+
+            <h2>Uploaded Chest X-ray</h2>
+
+            <img
+                src="{{ url_for('static', filename='uploads/' + image) }}"
+                alt="Uploaded Image"
+                class="result-image">
+
+        </div>
+
+        <div class="prediction-box">
+
+            <h2>Prediction</h2>
+
+            {% if prediction == "PNEUMONIA" %}
+
+                <h3 class="pneumonia">{{ prediction }}</h3>
+
+            {% else %}
+
+                <h3 class="normal">{{ prediction }}</h3>
+
+            {% endif %}
+
+            <h2>Confidence</h2>
+
+            <h3>{{ confidence }} %</h3>
+
+        </div>
+
+        <div class="result-section">
+
+           
+
+        </div>
+
+        <br>
+
+        <a href="/">
+
+            <button>
+
+                Predict Another Image
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

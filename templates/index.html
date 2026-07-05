@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pneumonia Detection using Deep Learning</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Pneumonia Detection</h1>
+
+        <p class="subtitle">
+            Upload a Chest X-ray image to detect whether the patient has
+            <strong>Pneumonia</strong> or is <strong>Normal</strong>.
+        </p>
+
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+
+            <div class="upload-box">
+
+                <input
+                    type="file"
+                    name="file"
+                    accept=".jpg,.jpeg,.png"
+                    required>
+
+            </div>
+
+            <br>
+
+            <button type="submit">
+                Predict
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
